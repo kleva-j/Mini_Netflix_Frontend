@@ -1,0 +1,37 @@
+<div class="signup">
+  <form [formGroup]='signupForm' (submit)='onSubmit()'>
+    <h1>Sign up</h1>
+    <input
+      type="text"
+      placeholder="Username"
+      formControlName="username"
+      required
+    />
+
+    <input
+      type="email"
+      placeholder="Email"
+      formControlName="email"
+      required
+    />
+  
+    <input
+      type="password"
+      minlength="4"
+      placeholder="Password"
+      formControlName="password"
+      required
+    />
+  
+    <button
+      class="button"
+      type="submit"
+      value="Sign up"
+    >Sign up</button>
+  </form>
+
+  <p class="center pb-4 mg-4">
+    <span>Already have an account?&nbsp;</span>
+    <a class="active" [routerLink]="['/login']">Log in!</a>
+  </p>
+</div>
