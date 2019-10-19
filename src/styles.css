@@ -1,0 +1,108 @@
+html { 
+  background: url(https://wallpaperbro.com/img/596299.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.overlay {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.78);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+input {
+  color: white;
+}
+
+.login,
+.signup {
+  background-color: rgba(0, 0, 0, 0.657);
+  border-radius: 4px;
+  display: flex;
+  width: 500px;
+  flex-direction: column;
+  margin: 100px auto;
+  justify-content: center;
+}
+
+.login form,
+.signup form {
+  margin: 10px auto 20px;
+  text-align: center;
+}
+
+.login input,
+.signup input {
+  box-sizing: border-box;
+  font-size: 17px;
+  border: none;
+  border-radius: 4px;
+  width: 75%;
+  padding: 18px;
+  margin-bottom: 20px;
+  background: rgba(31, 31, 31, 0.739);
+  letter-spacing: 1.5px;
+}
+
+.login button,
+.signup button {
+  width: 75%;
+  background-color: red;
+  border: 1px solid red;
+  color: white;
+  border-radius: 4px;
+  padding: 15px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  margin: 5px 0 0;
+}
+
+.button {
+  background-color: white;
+  color: black;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 2px;
+  border: 1px solid grey;
+  cursor: pointer;
+}
+
+a.link {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  background: royalblue;
+  border: 1px solid steelblue;
+}
+
+.center {
+  text-align: center;
+}
+
+.active {
+  color: red;
+}
+
+.pb-4{
+  padding-bottom: 20px;
+}
+
+.mg-4 {
+  margin: 20px;
+}

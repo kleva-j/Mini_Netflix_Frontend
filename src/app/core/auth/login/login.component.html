@@ -1,0 +1,33 @@
+<div class="login">
+  <form [formGroup]='loginForm' (submit)='onSubmit($event)'>
+    <h1>Log in</h1>
+    <input
+      type="email"
+      placeholder="Email"
+      formControlName="email"
+      required
+    />
+  
+    <input
+      type="password"
+      minlength="4"
+      placeholder="Password"
+      formControlName="password"
+      required
+    />
+  
+    <button
+      class="button"
+      type="submit"
+      value="Login"
+      (click)='submitCredentials()'
+    >Log In</button>
+    <p>or</p>
+    <button class="button btn-google" (click)='auth.googleAuthSignin()'>Log in with Google</button>
+  </form>
+  
+  <p class="center pb-4 mg-4">
+    <span>Don't have an account?&nbsp;</span>
+    <a class="active" [routerLink]="['/signup']">Sign up!</a>
+  </p>
+</div>
