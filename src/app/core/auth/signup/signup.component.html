@@ -1,5 +1,7 @@
-<div class="signup">
-  <form [formGroup]='signupForm' (submit)='onSubmit()'>
+<img *ngIf="loading" src='assets/spinner.svg' class="spinner" height='100px' alt='spinner' />
+
+<div class="signup" [class.darken]="loading">
+  <form [formGroup]='signupForm' (submit)='onSubmit($event)'>
     <h1>Sign up</h1>
     <input
       type="text"
@@ -17,7 +19,7 @@
   
     <input
       type="password"
-      minlength="4"
+      minlength="6"
       placeholder="Password"
       formControlName="password"
       required
@@ -25,8 +27,8 @@
   
     <button
       class="button"
+      [class.darken]="loading"
       type="submit"
-      value="Sign up"
     >Sign up</button>
   </form>
 

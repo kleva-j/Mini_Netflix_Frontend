@@ -1,4 +1,6 @@
-<div class="login">
+<img *ngIf="loading" src='assets/spinner.svg' class="spinner" height='100px' alt='spinner' />
+
+<div class="login" [class.darken]="loading">
   <form [formGroup]='loginForm' (submit)='onSubmit($event)'>
     <h1>Log in</h1>
     <input
@@ -10,24 +12,24 @@
   
     <input
       type="password"
-      minlength="4"
       placeholder="Password"
       formControlName="password"
       required
+      minlength="6"
     />
-  
+    
     <button
       class="button"
-      type="submit"
-      value="Login"
-      (click)='submitCredentials()'
-    >Log In</button>
-    <p>or</p>
-    <button class="button btn-google" (click)='auth.googleAuthSignin()'>Log in with Google</button>
-  </form>
-  
-  <p class="center pb-4 mg-4">
-    <span>Don't have an account?&nbsp;</span>
+      [class.darken]="loading"
+      (click)="submitCredentials()"
+      >Log In</button>
+      <p>or</p>
+
+      <button class="button btn-google" [class.darken]="loading" (click)='auth.googleAuthSignin()'>Log in with Google</button>
+    </form>
+    
+    <p class="center pb-4 mg-4">
+      <span>Don't have an account?&nbsp;</span>
     <a class="active" [routerLink]="['/signup']">Sign up!</a>
   </p>
 </div>

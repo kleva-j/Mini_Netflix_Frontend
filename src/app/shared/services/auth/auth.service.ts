@@ -12,6 +12,7 @@ import { of, Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 
 import { User } from 'src/app/models/user';
+import { ToastService } from '../toast/toast.service';
 
 @Injectable({
   providedIn: 'root'
@@ -22,7 +23,8 @@ export class AuthService {
   constructor(
     private fireAuth: AngularFireAuth,
     private fireStore: AngularFirestore,
-    private router: Router
+    private router: Router,
+    private toastr: ToastService
   ) {
     this.user$ = this.fireAuth.authState.pipe(
       switchMap((user) => {
@@ -31,7 +33,7 @@ export class AuthService {
         }
         return of(null);
       })
-    )
+    );
   }
 
   async googleAuthSignin() {
@@ -41,7 +43,7 @@ export class AuthService {
       this.updateUserData(user);
       return this.router.navigate(['/']);
     } catch(error) {
-      console.error(error.message);
+      this.toastr.sendMessage('error', { title: 'Login Error', message: error.message });
     }
   }
 
@@ -53,17 +55,16 @@ export class AuthService {
       await this.updateUserData(userDetails);
       return this.router.navigate(['/']);
     } catch(error) {
-      console.error(error.message);
+      this.toastr.sendMessage('error', { title: 'Signup Error', message: error.message });
     }
   }
 
-  async userLoginWithCredentials(email:string, password:string) {
+  async userLoginWithCredentials(email: string, password: string) {
     try {
-      console.log
       await firebase.auth().signInWithEmailAndPassword(email, password);
       return this.router.navigate(['/']);
     } catch(error) {
-      console.error(error);
+      this.toastr.sendMessage('error', { title: 'Login Error', message: error.message });
     }
   }
 
@@ -72,7 +73,7 @@ export class AuthService {
       await this.fireAuth.auth.signOut();
       return this.router.navigate(['/']);
     } catch(error) {
-      console.error(error.message);
+      this.toastr.sendMessage('error', { title: 'Logout Error', message: error.message });
     }
   }
 
