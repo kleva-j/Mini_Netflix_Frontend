@@ -1,15 +1,13 @@
-<div class="overlay">
-  <div *ngIf='auth.user$ | async as user; else login'>
-      <button class="button" (click)='auth.userSignOut()'>Sign Out</button>
+<div *ngIf='(auth.user$ | async) as user; else login'>
+    <button class="button" (click)='auth.userSignOut()'>Sign Out</button>
+</div>
+
+<ng-template #login>
+  <div style="display: flex; width: 150px; justify-content: space-between;">
+    <a routerLink="/login" class="link" routerLinkActive="active">Login</a>
+    <a routerLink="/signup" class="link" routerLinkActive="active">Signup</a>
   </div>
-  
-  <ng-template #login>
-    <div style="display: flex; width: 150px; justify-content: space-between;">
-      <a routerLink="/login" class="link" routerLinkActive="active">Login</a>
-      <a routerLink="/signup" class="link" routerLinkActive="active">Signup</a>
-    </div>
-  </ng-template>
-  <div class="container">
-    <router-outlet></router-outlet>
-  </div>
+</ng-template>
+<div class="container">
+  <router-outlet></router-outlet>
 </div>

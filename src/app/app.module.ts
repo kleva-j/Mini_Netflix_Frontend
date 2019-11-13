@@ -12,10 +12,12 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AppComponent } from 'src/app/app.component';
 import { environment } from 'src/environments/environment';
 import { AppRoutingModule } from 'src/app/app-routing.module';
-import { HttpService } from 'src/app/shared/services/http.service';
+import { HttpService } from 'src/app/shared/services/http/http.service';
 import { AuthService } from 'src/app/shared/services/auth/auth.service';
 import { LoginComponent } from 'src/app/core/auth/login/login.component';
 import { SignupComponent } from 'src/app/core/auth/signup/signup.component';
+import { HomeComponent } from 'src/app/core/home/home.component';
+import { ToastService } from 'src/app/shared/services/toast/toast.service';
 
 const { firebaseConfig } = environment;
 
@@ -24,6 +26,7 @@ const { firebaseConfig } = environment;
     AppComponent,
     LoginComponent,
     SignupComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,7 @@ const { firebaseConfig } = environment;
     AngularFirestoreModule,
     AngularFireAuthModule,
   ],
-  providers: [HttpService, AuthService],
+  providers: [HttpService, AuthService, ToastService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -106,3 +106,14 @@ a.link {
 .mg-4 {
   margin: 20px;
 }
+
+.spinner {
+  position: absolute;
+  left: 47.5%;
+  top: 42.2%;
+}
+
+.darken {
+  transition: all 500ms;
+  background: rgba(0, 0, 0, 0.5);
+}
