@@ -1,0 +1,17 @@
+<div class="navbar">
+  <div class="left">
+    <aside class="logo">Mini-FLIX</aside>
+  </div>
+  <div class="right">
+    <div *ngIf='(auth.user$ | async) as user; else login'>
+        <button class="button" (click)='auth.userSignOut()'>Sign Out</button>
+    </div>
+    
+    <ng-template #login>
+      <div>
+        <a routerLink="/login" class="link" routerLinkActive="active">Login</a>
+        <a routerLink="/signup" class="link" routerLinkActive="active">Signup</a>
+      </div>
+    </ng-template>
+  </div>
+</div>

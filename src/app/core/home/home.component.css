@@ -1,0 +1,34 @@
+.content {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.leftbar {
+  border: 1px solid yellow;
+  flex-grow: 1;
+  margin-right: 15px;
+  display: flex;
+  justify-content: flex-end;
+  padding-left: 40px;
+}
+
+.sidebar {
+  border: 1px solid red;
+  width: 350px;
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+}
+
+.thumbnail-container {
+  border: 1px solid saddlebrown;
+  height: 100%;
+  width: 94%;
+}
+
+.thumbnail-group {
+  border: 1px solid hotpink;
+  width: 94%;
+  height: 100%;
+  margin: 100px auto 0;
+}

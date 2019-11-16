@@ -18,6 +18,7 @@ import { LoginComponent } from 'src/app/core/auth/login/login.component';
 import { SignupComponent } from 'src/app/core/auth/signup/signup.component';
 import { HomeComponent } from 'src/app/core/home/home.component';
 import { ToastService } from 'src/app/shared/services/toast/toast.service';
+import { NavbarComponent } from './core/navbar/navbar.component';
 
 const { firebaseConfig } = environment;
 
@@ -27,6 +28,7 @@ const { firebaseConfig } = environment;
     LoginComponent,
     SignupComponent,
     HomeComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,

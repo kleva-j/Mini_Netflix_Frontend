@@ -1,0 +1,28 @@
+.navbar {
+  background: rgb(0, 0, 0, 0.5);
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-around;
+  height: 70px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  color: red;
+  font-family: ubuntu;
+  padding: 0;
+  padding: 10px;
+  border: 1px solid red;
+  font-weight: bolder;
+  font-size: 19px;
+}
+
+.right {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
