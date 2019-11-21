@@ -1,0 +1,17 @@
+<ul class="thumbnail-grid">
+  <li *ngFor="let item of datalist">
+    <a href="#">
+      <figure>
+        <img src={{item.url}} alt="">
+        <figcaption>
+          <p class="title">{{item.title}}
+            <span class="likes">{{item.likes}} Likes</span>
+            <span class="comments">{{item.comments}} Comments</span>
+          </p>
+         </figcaption>
+      </figure>
+    </a>
+  </li>
+</ul>
+
+<canvas id="canvas"></canvas>

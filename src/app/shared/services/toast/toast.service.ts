@@ -21,6 +21,7 @@ export class Message {
 export class ToastService {
   constructor() {
     toastr.options.closeButton = true;
+    toastr.options.progressBar = true;
   }
 
   sendMessage(type: string, { title, message }) {
