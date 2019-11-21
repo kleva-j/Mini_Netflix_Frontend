@@ -1,0 +1,24 @@
+.thumbnail-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style-type: none;
+  justify-content: space-between;
+}
+
+.thumbnail-grid li {
+  width: 330px;
+  height: 460px;
+  margin-bottom: 25px;
+}
+
+.thumbnail-grid li img {
+  max-width: 100%;
+  min-width: 100%;
+  height: 460px;
+}
+
+figure, ul {
+  margin: 0;
+  padding: 0;
+}

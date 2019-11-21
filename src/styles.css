@@ -6,12 +6,18 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-color: rgba(0, 0, 0, 0.78);
 }
 
 body {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
+}
+
+.app-root {
+  position: relative;
+  z-index: 10;
 }
 
 .overlay {
@@ -21,6 +27,7 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
+  z-index: 1;
 }
 
 input {
@@ -36,6 +43,8 @@ input {
   flex-direction: column;
   margin: 100px auto;
   justify-content: center;
+  z-index: 10;
+  position: relative;
 }
 
 .login form,

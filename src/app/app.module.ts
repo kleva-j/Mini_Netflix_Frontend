@@ -19,6 +19,7 @@ import { SignupComponent } from 'src/app/core/auth/signup/signup.component';
 import { HomeComponent } from 'src/app/core/home/home.component';
 import { ToastService } from 'src/app/shared/services/toast/toast.service';
 import { NavbarComponent } from './core/navbar/navbar.component';
+import { MovieThumbnailComponent } from './core/movie-thumbnail/movie-thumbnail.component';
 
 const { firebaseConfig } = environment;
 
@@ -29,6 +30,7 @@ const { firebaseConfig } = environment;
     SignupComponent,
     HomeComponent,
     NavbarComponent,
+    MovieThumbnailComponent,
   ],
   imports: [
     BrowserModule,
