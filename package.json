@@ -21,7 +21,7 @@
     "@angular/platform-browser-dynamic": "~8.2.8",
     "@angular/router": "~8.2.8",
     "firebase": "^7.2.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "lodash": "^4.17.15",
     "rxjs": "~6.4.0",
     "toastr": "^2.1.4",
