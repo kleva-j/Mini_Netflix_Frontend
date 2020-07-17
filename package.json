@@ -29,7 +29,7 @@
     "toastr": "^2.1.4",
     "tslib": "^1.13.0",
     "zone.js": "~0.10.3",
-    "snyk": "^1.348.2"
+    "snyk": "^1.349.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.6",
