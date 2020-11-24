@@ -22,14 +22,14 @@
     "@angular/platform-browser": "~8.2.14",
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
-    "firebase": "^7.22.0",
+    "firebase": "^8.0.1",
     "jquery": "^3.5.1",
     "lodash": "^4.17.20",
     "rxjs": "~6.6.3",
     "toastr": "^2.1.4",
-    "tslib": "^1.13.0",
-    "zone.js": "~0.11.1",
-    "snyk": "^1.402.0"
+    "tslib": "^1.14.1",
+    "zone.js": "~0.11.2",
+    "snyk": "^1.425.4"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.6",
