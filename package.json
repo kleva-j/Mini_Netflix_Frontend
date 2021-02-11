@@ -16,7 +16,7 @@
     "@angular/animations": "~8.2.14",
     "@angular/common": "~8.2.14",
     "@angular/compiler": "~8.2.14",
-    "@angular/core": "~8.2.14",
+    "@angular/core": "~11.0.5",
     "@angular/fire": "^5.4.2",
     "@angular/forms": "~8.2.14",
     "@angular/platform-browser": "~8.2.14",
@@ -29,7 +29,7 @@
     "toastr": "^2.1.4",
     "tslib": "^1.14.1",
     "zone.js": "~0.11.2",
-    "snyk": "^1.425.4"
+    "snyk": "^1.426.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.6",
